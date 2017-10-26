@@ -40,4 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   buttons[0].addEventListener('click', showHide);
+
+  var navbarborder = document.querySelector('nav');
+  
+  window.addEventListener('scroll', function () {
+    navbarborder.style.borderBottom = '1px solid #7f7f7f';
+
+  });
 });

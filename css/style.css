@@ -14,6 +14,7 @@ nav {
   background-color: #fff;
   color: #ea6c56;
   font-weight: 600;
+  
 }
 
 .navbar-brand {
@@ -21,10 +22,12 @@ nav {
   text-decoration: none;
   font-size: 2.5rem;
   text-transform: uppercase;  
+  
 }
 
 .brand-container {
   padding: 0;
+ 
 }
 
 .navbar-brand:hover {
@@ -55,6 +58,7 @@ nav {
   left: 0;
   margin: auto;
   padding: 1rem 4rem 1rem 2rem;
+ 
 }
 
 .dropdown ul {
@@ -305,3 +309,4 @@ footer p {
 p.more {
   display: none;
 }
+
