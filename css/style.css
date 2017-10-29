@@ -295,7 +295,7 @@ nav {
 }
 
 footer {
-  margin-top: 4rem;
+ 
   background-color: #44ca85;
   height: 10rem;
 }
@@ -303,7 +303,7 @@ footer {
 footer p {
   font-size: 1.2rem;
   color: #424343;
-  margin-top: 3rem;
+  margin-top: 10px;
 }
 
 p.more {

@@ -47,4 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarborder.style.borderBottom = '1px solid #7f7f7f';
 
   });
+
+  var buttonUp  = document.querySelector('footer .btn');
+    buttonUp.addEventListener('click',  function(){
+    window.scroll(0,0)});
 });
