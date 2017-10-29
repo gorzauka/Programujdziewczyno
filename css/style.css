@@ -310,3 +310,9 @@ p.more {
   display: none;
 }
 
+.slider li p{
+  display: none;
+}
+p .visible {
+  display: inline-block;
+}

@@ -51,4 +51,19 @@ document.addEventListener('DOMContentLoaded', function() {
   var buttonUp  = document.querySelector('footer .btn');
     buttonUp.addEventListener('click',  function(){
     window.scroll(0,0)});
+
+  var items = document.querySelectorAll('.org');
+    console.log(items);
+  var dots = document.querySelectorAll('.dot');
+    console.log(dots);
+
+    dots[0].addEventListener('click', function(){
+
+  for (var i = 0; i<dots.length; i++) {
+    dots[i].classList.remove('active');
+    items[i].classList.remove('visible');
+  }
+  this.classList.add('active');
+  items[0].classList.add('visible');
+    });
 });
