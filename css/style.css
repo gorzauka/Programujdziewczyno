@@ -276,6 +276,13 @@ nav {
   list-style: none;
 }
 
+.slider li{
+  display: none;
+}
+.slider .visible {
+  display: inline-block;
+}
+
 .dot {
   display: inline-block;
   margin-right: 1rem;
@@ -310,9 +317,3 @@ p.more {
   display: none;
 }
 
-.slider li p{
-  display: none;
-}
-p .visible {
-  display: inline-block;
-}

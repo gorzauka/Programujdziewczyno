@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
      if (textArea.style.display === 'none' || textArea.style.display === '') {
 
         textArea.style.display = 'block';
-        this.innerHTML = 'MNIEJ <span class="glyphicon glyphicon-chevron-up"></span>';
+        this.innerHTML = 'MNIEJ <span class="glyphicon glyphicon-chevron-up"><span>';
 
     } else {
 
         textArea.style.display = 'none';
-        this.innerHTML = 'WIĘCEJ <span class="glyphicon glyphicon-chevron-down"></span>';
+        this.innerHTML = 'WIĘCEJ <span class="glyphicon glyphicon-chevron-down"><span>';
       }
 
     }
@@ -52,18 +52,47 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonUp.addEventListener('click',  function(){
     window.scroll(0,0)});
 
-  var items = document.querySelectorAll('.org');
+  var items = document.querySelectorAll('.slider li');
     console.log(items);
   var dots = document.querySelectorAll('.dot');
     console.log(dots);
 
-    dots[0].addEventListener('click', function(){
 
-  for (var i = 0; i<dots.length; i++) {
-    dots[i].classList.remove('active');
-    items[i].classList.remove('visible');
-  }
-  this.classList.add('active');
-  items[0].classList.add('visible');
-    });
+
+      
+
+for (var i = 0; i < dots.length; i++) {
+  (function(index) {
+  dots[i].addEventListener('click', function(){
+
+  for (var j = 0; j < items.length; j++) {
+  dots[j].classList.remove('active');
+  items[j].classList.remove('visible');
+};
+dots[index].classList.add('active');
+items[index].classList.add('visible');
+
+    });  
+  })(i);
+  
+}
+
+var addTaskBtn = document.querySelector('.add-task-btn')
+  console.log(addTaskBtn);
+
+var addTaskInp = document.querySelector('.form-control')
+  console.log(addTaskInp);
+
+var taskList = document.querySelector('.list-group')
+  console.log(taskList);
+
+ function addTask() {
+         taskList.appendChild(newTask);
+    };
+
+    addTaskBtn.addEventListener('click', addTask);
+
+var newTask = document.createElement('li');
+console.log(addTaskInp.innerHtml);
+
 });
